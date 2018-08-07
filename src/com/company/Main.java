@@ -10,7 +10,7 @@ public class Main {
 
         tyrana.attack(lion);
 
-        pigeon.getID();
+
 
 
 

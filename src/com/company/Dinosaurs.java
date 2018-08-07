@@ -9,7 +9,7 @@ public class Dinosaurs extends Animal implements canWalk {
     @Override
     public void attack(Animal defending) {
         if(defending instanceof canFly){
-            
+
         }else{
             super.attack(defending);
         }

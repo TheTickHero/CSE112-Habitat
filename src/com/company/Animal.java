@@ -11,7 +11,6 @@ public  class Animal {
         this.name = name;
         this.weight = weight;
         this.isDead = false;
-        this.ID = 1;
         this.ID++;
     }
 
