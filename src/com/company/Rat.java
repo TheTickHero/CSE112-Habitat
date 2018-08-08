@@ -1,8 +1,8 @@
 package com.company;
 
-public class Rat extends Mammal implements canWalk,canSwim {
+public class Rat extends Mammals implements canSwim {
 
-    public Rat(String name, double weight) {
-        super(name, weight);
+    public Rat(double weight) {
+        super(weight);
     }
 }

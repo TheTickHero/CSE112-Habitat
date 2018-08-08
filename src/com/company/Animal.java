@@ -8,20 +8,24 @@ public  class Animal {
     private static int count;
     private int ID;
 
-    public Animal(String name , double weight) {
-        this.name = name;
+    public Animal(double weight) {
         this.weight = weight;
         this.isDead = false;
         count++;
         this.ID = count;
     }
 
+
     public void attack(Animal defending){
-        if(defending.getWeight() < this.getWeight()){
-            System.out.println(defending.getName() + " is dead");
-            defending.setDead(true);
+        if (!defending.isDead && !this.isDead){
+            if (defending.getWeight() < this.getWeight()) {
+                System.out.println(defending.getName() + " is dead");
+                defending.setDead(true);
+                this.weight = defending.weight / 2;
+            }
         }
     }
+
 
     public void setDead(boolean dead) {
         isDead = dead;

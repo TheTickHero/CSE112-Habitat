@@ -1,8 +1,10 @@
 package com.company;
 
-public class Lion extends Mammal implements canWalk {
+public class Lion extends Mammals {
 
-    public Lion(String name, double weight) {
-        super(name, weight);
+    public Lion(double weight) {
+        super(weight);
     }
+
+
 }

@@ -1,8 +1,8 @@
 package com.company;
 
-public class Bat extends Mammal implements canWalk,canFly {
+public class Bat extends Mammals implements canFly {
 
-    public Bat(String name, double weight) {
-        super(name, weight);
+    public Bat(double weight) {
+        super(weight);
     }
 }

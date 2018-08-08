@@ -1,12 +1,9 @@
 package com.company;
 
-public abstract class Mammal extends Animal{
+public abstract class Mammals extends Animal implements canWalk{
 
-
-
-    public Mammal(String name, double weight) {
-        super(name, weight);
-
+    public Mammals(double weight) {
+        super(weight);
     }
 
     @Override

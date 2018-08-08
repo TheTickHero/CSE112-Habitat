@@ -1,9 +1,9 @@
 package com.company;
 
-public  class Bird extends Animal implements canFly{
+public class Crocodile extends Reptiles {
 
-    public Bird(String name, double weight) {
-        super(name, weight);
+    public Crocodile(double weight) {
+        super(weight);
     }
 
     @Override
