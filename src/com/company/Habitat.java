@@ -1,37 +1,29 @@
 package com.company;
 
 
+import java.util.ArrayList;
 
 public class Habitat {
 
-    private Bat bat;
-    private Brachiosaurus brachiosaurus;
-    private Crocodile crocodile1;
-    private Crocodile crocodile2;
-    private Lion lion;
-    private Pigeon pigeon;
-    private Rat rat;
-    private Tyrannosaurus trex;
+    private ArrayList<Animal> animalsInHabitat;
 
-    private Animal[] animalsInHabitat = {bat, brachiosaurus, crocodile1, crocodile2, lion, pigeon, rat, trex};
-    public int animalCount = animalsInHabitat.length;
     private int dead = 0;
 
-
     public Habitat() {
-        this.animalsInHabitat =
+        this.animalsInHabitat = new ArrayList<Animal>();
     }
 
+    public void add(Animal animal){
+        animalsInHabitat.add(animal);
+    }
 
+    public Animal getAnimal(int ID){
+        return animalsInHabitat.get(ID);
+    }
 
-    
-
-
-
-
-
-
-
+    public void runIteration(int attackerID , int defenderID){
+        animalsInHabitat.get(attackerID).attack(animalsInHabitat.get(defenderID));
+    }
 
 
 }

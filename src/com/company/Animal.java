@@ -2,7 +2,6 @@ package com.company;
 
 public  class Animal {
 
-    private String name;
     private double weight;
     private boolean isDead;
     private static int count;
@@ -18,8 +17,8 @@ public  class Animal {
 
     public void attack(Animal defending){
         if (!defending.isDead && !this.isDead){
-            if (defending.getWeight() < this.getWeight()) {
-                System.out.println(defending.getName() + " is dead");
+            if (defending.getWeight() < weight) {
+                System.out.println(defending.getClass().getSimpleName() + " is dead");
                 defending.setDead(true);
                 this.weight = defending.weight / 2;
             }
@@ -35,8 +34,8 @@ public  class Animal {
         return isDead;
     }
 
-    public String getName() {
-        return name;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
     public double getWeight() {
@@ -46,4 +45,6 @@ public  class Animal {
     public int getID() {
         return ID;
     }
+
+
 }
