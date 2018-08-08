@@ -5,13 +5,15 @@ public  class Animal {
     private String name;
     private double weight;
     private boolean isDead;
+    private static int count;
     private int ID;
 
     public Animal(String name , double weight) {
         this.name = name;
         this.weight = weight;
         this.isDead = false;
-        this.ID++;
+        count++;
+        this.ID = count;
     }
 
     public void attack(Animal defending){
