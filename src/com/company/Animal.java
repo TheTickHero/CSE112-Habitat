@@ -20,7 +20,7 @@ public  class Animal {
             if (defending.getWeight() < weight) {
                 System.out.println(defending.getClass().getSimpleName() + " is dead");
                 defending.setDead(true);
-                this.weight = defending.weight / 2;
+                this.weight = defending.getWeight() / 2;
             }
         }
     }

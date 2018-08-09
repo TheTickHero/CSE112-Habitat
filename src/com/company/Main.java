@@ -25,26 +25,22 @@ public class Main {
         island.add(rat);
         island.add(trex);
 
+
+
         island.runIteration(4,7);
-        island.runIteration(2,3);
-        island.runIteration(2,4);
-        island.runIteration(7,4);
-        island.runIteration(2,6);
-        island.runIteration(6,5);
-        island.runIteration(7,0);
-        island.runIteration(4,7);
-        island.runIteration(2,5);
-        island.runIteration(7,2);
-        island.runIteration(0,6);
-        island.runIteration(1,7);
+        //island.runIteration(2,3);
+        //island.runIteration(2,4);
+        //island.runIteration(7,4);
+        //island.runIteration(2,6);
+        //island.runIteration(6,5);
+        //island.runIteration(7,0);
+        //island.runIteration(4,7);
+        //island.runIteration(2,5);
+        //island.runIteration(7,2);
+        //island.runIteration(0,6);
+        //island.runIteration(1,7);
 
-
-
-
-
-
-
-
+        System.out.println(island);
 
 
 

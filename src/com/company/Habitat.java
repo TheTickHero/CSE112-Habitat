@@ -17,7 +17,7 @@ public class Habitat {
         animalsInHabitat.add(animal);
     }
 
-    public Animal getAnimal(int ID){
+    private Animal getAnimal(int ID){
         return animalsInHabitat.get(ID);
     }
 
@@ -26,4 +26,8 @@ public class Habitat {
     }
 
 
+    @Override
+    public String toString() {
+        return "Att: " + animalsInHabitat.get(4).getClass().getSimpleName() + "("+animalsInHabitat.get(4).getWeight()+")";
+    }
 }
