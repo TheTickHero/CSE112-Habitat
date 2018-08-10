@@ -8,15 +8,13 @@ public abstract class Dinosaurs extends Animal implements canWalk {
 
     @Override
     public void attack(Animal defending){
-        if(defending instanceof canFly){
-
-        }else if(defending instanceof Dinosaurs){
-            defending.setDead(true);
-            this.setDead(true);
+        if(defending instanceof Dinosaurs && !(defending instanceof canFly)){
+            defending.setDead();
+            this.setDead();
         }else{
             if (!defending.isDead() && !this.isDead()){
                 if (defending.getWeight() < this.getWeight()) {
-                    defending.setDead(true);
+                    defending.setDead();
                     float newWeight = this.getWeight() + defending.getWeight() / 2;
                     this.setWeight(newWeight);
                 }

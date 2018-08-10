@@ -31,7 +31,7 @@ public class Habitat {
         members.get(attackerID).attack(members.get(defenderID));
 
         if(defender.isDead()){
-            str += defender.getClass().getSimpleName() + "["+defenderID++ +"] (" + defender.getWeight() + ") died \n" +
+            str += defender.getClass().getSimpleName() + "[" + defenderID++ +"] (" + defender.getWeight() + ") died \n" +
              "Attacker " + attacker.getClass().getSimpleName() + "("+ attacker.getWeight()+") new weight is " + attacker.getWeight();
         }
         str += "\n\n";
@@ -41,6 +41,11 @@ public class Habitat {
 
     @Override
     public String toString() {
+        for(Animal a : members){
+            if(!a.isDead()){
+                str += "SURVIVOR IS:" + a.getClass().getSimpleName() + " with weight " + a.getWeight();
+            }
+        }
         return str;
 
     }

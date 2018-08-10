@@ -18,15 +18,15 @@ public  class Animal {
     public void attack(Animal defending){
         if (!defending.isDead && !isDead){
             if (defending.getWeight() < weight) {
-                defending.setDead(true);
+                defending.setDead();
                 this.weight += defending.getWeight() / 2;
             }
         }
     }
 
 
-    public void setDead(boolean dead) {
-        isDead = dead;
+    public void setDead() {
+        isDead = true;
     }
 
     public boolean isDead() {
