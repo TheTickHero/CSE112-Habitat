@@ -1,13 +1,9 @@
 package com.company;
 
-public class Tyrannosaurus extends Reptiles {
+public class Tyrannosaurus extends Dinosaurs {
 
-    public Tyrannosaurus(double weight) {
+    public Tyrannosaurus(float weight) {
         super(weight);
     }
 
-    @Override
-    public void attack(Animal defending) {
-        super.attack(defending);
-    }
 }

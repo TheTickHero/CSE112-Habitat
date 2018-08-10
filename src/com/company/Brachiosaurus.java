@@ -2,7 +2,7 @@ package com.company;
 
 public class Brachiosaurus extends Dinosaurs {
 
-    public Brachiosaurus(double weight) {
+    public Brachiosaurus(float weight) {
         super(weight);
     }
 

@@ -2,7 +2,7 @@ package com.company;
 
 public abstract class Dinosaurs extends Animal implements canWalk {
 
-    public Dinosaurs(double weight) {
+    public Dinosaurs(float weight) {
         super(weight);
     }
 
@@ -14,7 +14,13 @@ public abstract class Dinosaurs extends Animal implements canWalk {
             defending.setDead(true);
             this.setDead(true);
         }else{
-            super.attack(defending);
+            if (!defending.isDead() && !this.isDead()){
+                if (defending.getWeight() < this.getWeight()) {
+                    defending.setDead(true);
+                    float newWeight = this.getWeight() + defending.getWeight() / 2;
+                    this.setWeight(newWeight);
+                }
+            }
         }
 
     }

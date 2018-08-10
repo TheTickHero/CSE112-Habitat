@@ -2,7 +2,7 @@ package com.company;
 
 public abstract class Mammals extends Animal implements canWalk{
 
-    public Mammals(double weight) {
+    public Mammals(float weight) {
         super(weight);
     }
 

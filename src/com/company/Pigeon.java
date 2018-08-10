@@ -2,7 +2,7 @@ package com.company;
 
 public class Pigeon extends Birds {
 
-    public Pigeon(double weight) {
+    public Pigeon(float weight) {
         super(weight);
     }
 
