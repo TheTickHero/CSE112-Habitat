@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class Habitat {
 
-    private static int count = 1;
+    private static int iterationCount = 1;
     private String str = "";
     private ArrayList<Animal> members;
-    private int dead = 0;
+    private int deadCount = 0;
 
     public Habitat() {
         this.members = new ArrayList<Animal>();
@@ -22,22 +22,26 @@ public class Habitat {
         Animal defender = members.get(defenderID);
 
         if (!defender.isDead() && !attacker.isDead()){
-            str += "Iteration: " + count + "\nAtt: " + attacker.getName() + "[" + (attackerID+1) +"] ("+ attacker.getWeight()+")\n" +
+            str += "Iteration: " + iterationCount + "\nAtt: " + attacker.getName() + "[" + (attackerID+1) +"] ("+ attacker.getWeight()+")\n" +
                     "Deff: " + defender.getName() + "[" + (defenderID+1) + "] (" + defender.getWeight() + ")\n";
             members.get(attackerID).attack(members.get(defenderID));
             if(attacker.isDead() && defender.isDead()){
-                str += "BOTH OF THEM ARE DIED!!";
+                str += "BOTH OF THEM DIED!! \n";
+                deadCount += 2;
+                str += "Number of living animals: " + (members.size() - deadCount) + "\n";
             }else if(defender.isDead()){
                 str += defender.getName() + "["+(defenderID+1) +"] (" + defender.getWeight() + ") died \n" +
-                        "Attacker " + attacker.getName() +"["+(attackerID+1) +"] ("+ attacker.getWeight()+") new weight is " + attacker.getWeight();
+                        "Attacker " + attacker.getName() +"["+(attackerID+1) +"] ("+ attacker.getWeight()+") new weight is " + attacker.getWeight() + "\n";
+                deadCount++;
+                str += "Number of living animals: " + (members.size() - deadCount);
             }else {
-                str += "NO ONE DIED, WEIGHTS ARE STILL SAME.\n";
+                str += "NO ONE DIED, WEIGHTS ARE STILL SAME.\nNumber of living animals: " + (members.size() - deadCount);
             }
             str += "\n\n";
         }else {
-            str += "Iteration: " + count + "\nONE OF THE ANIMAL IN THIS ITERATION IS DEAD, NO FIGHT.\n\n";
+            str += "Iteration: " + iterationCount + "\nONE OF THE ANIMAL IN THIS ITERATION IS DEAD, NO FIGHT.\n\n";
         }
-        count++;
+        iterationCount++;
     }
 
 
