@@ -7,14 +7,14 @@ public class Main {
 
         Habitat island = new Habitat();
 
-        Animal bat = new Bat(2);
-        Animal branhiosairus = new Brachiosaurus(56000);
-        Animal crocodile1 = new Crocodile(400, "Crocodile1");
-        Animal crocodile2 = new Crocodile(350, "Crocodile2");
-        Animal lion = new Lion(450);
-        Animal pigeon = new Pigeon(3);
-        Animal rat = new Rat(1);
-        Animal trex = new Tyrannosaurus(15000);
+        Animal bat = new Bat("Bat", 2);
+        Animal branhiosairus = new Brachiosaurus("Branhiosaururs", 56000);
+        Animal crocodile1 = new Crocodile( "Crocodile1", 400);
+        Animal crocodile2 = new Crocodile( "Crocodile2", 350);
+        Animal lion = new Lion("Lion", 450);
+        Animal pigeon = new Pigeon("Pigeon", 3);
+        Animal rat = new Rat("Rat", 1);
+        Animal trex = new Tyrannosaurus("T-rex", 15000);
 
         island.add(bat);
         island.add(branhiosairus);
@@ -40,6 +40,7 @@ public class Main {
         island.runIteration(1,7);
 
         System.out.println(island);
+
 
 
 

@@ -2,11 +2,9 @@ package com.company;
 
 public class Crocodile extends Reptiles {
 
-    private String name;
+    public Crocodile(String name, float weight) {
+        super(name, weight);
 
-    public Crocodile(float weight , String name) {
-        super(weight);
-        this.name = name;
     }
 
     @Override
@@ -20,7 +18,5 @@ public class Crocodile extends Reptiles {
         }
     }
 
-    public String getName() {
-        return name;
-    }
+
 }

@@ -2,8 +2,8 @@ package com.company;
 
 public abstract class Reptiles extends Animal implements canSwim, canWalk {
 
-    public Reptiles(float weight) {
-        super(weight);
+    public Reptiles(String name, float weight) {
+        super(name, weight);
     }
 
     @Override

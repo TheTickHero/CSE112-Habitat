@@ -2,8 +2,8 @@ package com.company;
 
 public abstract class Mammals extends Animal implements canWalk{
 
-    public Mammals(float weight) {
-        super(weight);
+    public Mammals(String name, float weight) {
+        super(name, weight);
     }
 
     @Override
@@ -11,8 +11,4 @@ public abstract class Mammals extends Animal implements canWalk{
         super.attack(defending);
     }
 
-    @Override
-    public boolean isDead() {
-        return super.isDead();
-    }
 }

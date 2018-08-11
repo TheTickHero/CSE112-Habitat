@@ -2,12 +2,14 @@ package com.company;
 
 public  class Animal {
 
+    private String name;
     private float weight;
     private boolean isDead;
     private static int count;
     private int ID;
 
-    public Animal(float weight) {
+    public Animal(String name, float weight) {
+        this.name = name;
         this.weight = weight;
         this.isDead = false;
         count++;
@@ -17,7 +19,7 @@ public  class Animal {
 
     public void attack(Animal defending){
         if (!defending.isDead && !isDead){
-            if (defending.getWeight() < weight) {
+            if (defending.getWeight() < this.weight) {
                 defending.setDead();
                 this.weight += defending.getWeight() / 2;
             }
@@ -43,6 +45,10 @@ public  class Animal {
 
     public int getID() {
         return ID;
+    }
+
+    public String getName(){
+        return name;
     }
 
 

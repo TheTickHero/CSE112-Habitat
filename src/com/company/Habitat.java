@@ -26,13 +26,13 @@ public class Habitat {
         Animal attacker = members.get(attackerID);
         Animal defender = members.get(defenderID);
 
-        str += "Iteration: " + count + "\nAtt: " + attacker.getClass().getSimpleName() + "("+ attacker.getWeight()+")\n" +
-                "Deff: " + defender.getClass().getSimpleName() + "("+ defender.getWeight()+")\n";
+        str += "Iteration: " + count + "\nAtt: " + attacker.getName() + "[" + (attackerID + 1) + "] ("+ attacker.getWeight()+")\n" +
+                "Deff: " + defender.getName() + "[" + (defenderID + 1) + "] ("+ defender.getWeight()+")\n";
         members.get(attackerID).attack(members.get(defenderID));
 
         if(defender.isDead()){
-            str += defender.getClass().getSimpleName() + "[" + defenderID++ +"] (" + defender.getWeight() + ") died \n" +
-             "Attacker " + attacker.getClass().getSimpleName() + "("+ attacker.getWeight()+") new weight is " + attacker.getWeight();
+            str += defender.getName() + "[" + (defenderID + 1) +"] (" + defender.getWeight() + ") died \n" +
+             "Attacker " + attacker.getClass().getSimpleName() + "("+ attacker.getWeight() + " new weight)";
         }
         str += "\n\n";
         count++;
@@ -41,9 +41,9 @@ public class Habitat {
 
     @Override
     public String toString() {
-        for(Animal a : members){
+        for(Animal a : this.members){
             if(!a.isDead()){
-                str += "SURVIVOR IS:" + a.getClass().getSimpleName() + " with weight " + a.getWeight();
+                str += "SURVIVOR IS: " + a.getClass().getSimpleName() + " with weight " + a.getWeight();
             }
         }
         return str;

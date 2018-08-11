@@ -2,8 +2,8 @@ package com.company;
 
 public class Brachiosaurus extends Dinosaurs {
 
-    public Brachiosaurus(float weight) {
-        super(weight);
+    public Brachiosaurus(String name, float weight) {
+        super(name, weight);
     }
 
     @Override
