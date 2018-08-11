@@ -1,6 +1,5 @@
 package com.company;
 
-
 import java.util.ArrayList;
 
 public class Habitat {
@@ -18,23 +17,26 @@ public class Habitat {
         members.add(animal);
     }
 
-    private Animal getAnimal(int ID){
-        return members.get(ID);
-    }
-
     public void runIteration(int attackerID , int defenderID){
         Animal attacker = members.get(attackerID);
         Animal defender = members.get(defenderID);
 
-        str += "Iteration: " + count + "\nAtt: " + attacker.getName() + "[" + (attackerID + 1) + "] ("+ attacker.getWeight()+")\n" +
-                "Deff: " + defender.getName() + "[" + (defenderID + 1) + "] ("+ defender.getWeight()+")\n";
-        members.get(attackerID).attack(members.get(defenderID));
-
-        if(defender.isDead()){
-            str += defender.getName() + "[" + (defenderID + 1) +"] (" + defender.getWeight() + ") died \n" +
-             "Attacker " + attacker.getClass().getSimpleName() + "("+ attacker.getWeight() + " new weight)";
+        if (!defender.isDead() && !attacker.isDead()){
+            str += "Iteration: " + count + "\nAtt: " + attacker.getName() + "[" + (attackerID+1) +"] ("+ attacker.getWeight()+")\n" +
+                    "Deff: " + defender.getName() + "[" + (defenderID+1) + "] (" + defender.getWeight() + ")\n";
+            members.get(attackerID).attack(members.get(defenderID));
+            if(attacker.isDead() && defender.isDead()){
+                str += "BOTH OF THEM ARE DIED!!";
+            }else if(defender.isDead()){
+                str += defender.getName() + "["+(defenderID+1) +"] (" + defender.getWeight() + ") died \n" +
+                        "Attacker " + attacker.getName() +"["+(attackerID+1) +"] ("+ attacker.getWeight()+") new weight is " + attacker.getWeight();
+            }else {
+                str += "NO ONE DIED, WEIGHTS ARE STILL SAME.\n";
+            }
+            str += "\n\n";
+        }else {
+            str += "Iteration: " + count + "\nONE OF THE ANIMAL IN THIS ITERATION IS DEAD, NO FIGHT.\n\n";
         }
-        str += "\n\n";
         count++;
     }
 

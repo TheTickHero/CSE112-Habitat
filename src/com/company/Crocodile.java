@@ -7,16 +7,4 @@ public class Crocodile extends Reptiles {
 
     }
 
-    @Override
-    public void attack(Animal defending) {
-        if (!defending.isDead() && !this.isDead()){
-            if (defending.getWeight() < this.getWeight()) {
-                defending.setDead();
-                float newWeight = this.getWeight() + defending.getWeight() / 2;
-                this.setWeight(newWeight);
-            }
-        }
-    }
-
-
 }

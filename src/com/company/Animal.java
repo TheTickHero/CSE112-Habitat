@@ -1,6 +1,6 @@
 package com.company;
 
-public  class Animal {
+public class Animal {
 
     private String name;
     private float weight;
@@ -17,8 +17,8 @@ public  class Animal {
     }
 
 
-    public void attack(Animal defending){
-        if (!defending.isDead && !isDead){
+    public void attack(Animal defending) {
+        if (!defending.isDead && !isDead) {
             if (defending.getWeight() < this.weight) {
                 defending.setDead();
                 this.weight += defending.getWeight() / 2;
@@ -47,7 +47,7 @@ public  class Animal {
         return ID;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 

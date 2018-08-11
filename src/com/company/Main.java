@@ -25,7 +25,7 @@ public class Main {
         island.add(rat);
         island.add(trex);
 
-
+        
         island.runIteration(4,7);
         island.runIteration(2,3);
         island.runIteration(2,4);
