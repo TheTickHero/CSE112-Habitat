@@ -6,5 +6,8 @@ public abstract class Birds extends Animal implements canFly{
         super(name, weight);
     }
 
-
+    @Override
+    public final void attack(Animal defending) {
+        super.attack(defending);
+    }
 }
